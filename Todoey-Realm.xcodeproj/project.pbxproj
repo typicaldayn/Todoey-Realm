@@ -7,23 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3984ABB4A537BCE0BBDB0321 /* Pods_Todoey_Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4FFA75E98A3D035F71672A /* Pods_Todoey_Realm.framework */; };
+		BE2DEAE028894C830011B82E /* SwipeTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2DEADF28894C820011B82E /* SwipeTableVC.swift */; };
 		BE96A48228880DBC00C1C01D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96A48128880DBC00C1C01D /* AppDelegate.swift */; };
 		BE96A48428880DBC00C1C01D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96A48328880DBC00C1C01D /* SceneDelegate.swift */; };
-		BE96A48628880DBC00C1C01D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96A48528880DBC00C1C01D /* ViewController.swift */; };
+		BE96A48628880DBC00C1C01D /* CategoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96A48528880DBC00C1C01D /* CategoryTVC.swift */; };
 		BE96A48928880DBC00C1C01D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE96A48728880DBC00C1C01D /* Main.storyboard */; };
 		BE96A48B28880DBE00C1C01D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE96A48A28880DBE00C1C01D /* Assets.xcassets */; };
 		BE96A48E28880DBE00C1C01D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE96A48C28880DBE00C1C01D /* LaunchScreen.storyboard */; };
+		BE96A49828880EB400C1C01D /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96A49728880EB300C1C01D /* TableView.swift */; };
+		BE96A49A28880EE800C1C01D /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96A49928880EE800C1C01D /* Consts.swift */; };
+		BE96A49D28880FFB00C1C01D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = BE96A49C28880FFB00C1C01D /* Realm */; };
+		BE96A49F28880FFB00C1C01D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BE96A49E28880FFB00C1C01D /* RealmSwift */; };
+		BE96A4A22888107E00C1C01D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96A4A12888107E00C1C01D /* Item.swift */; };
+		BE96A4A42888108600C1C01D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96A4A32888108600C1C01D /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E4FFA75E98A3D035F71672A /* Pods_Todoey_Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todoey_Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		562D16DEFACA4E5058BCBB2F /* Pods-Todoey-Realm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todoey-Realm.release.xcconfig"; path = "Target Support Files/Pods-Todoey-Realm/Pods-Todoey-Realm.release.xcconfig"; sourceTree = "<group>"; };
+		BE2DEADF28894C820011B82E /* SwipeTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableVC.swift; sourceTree = "<group>"; };
 		BE96A47E28880DBC00C1C01D /* Todoey-Realm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todoey-Realm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE96A48128880DBC00C1C01D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE96A48328880DBC00C1C01D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BE96A48528880DBC00C1C01D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE96A48528880DBC00C1C01D /* CategoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTVC.swift; sourceTree = "<group>"; };
 		BE96A48828880DBC00C1C01D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE96A48A28880DBE00C1C01D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE96A48D28880DBE00C1C01D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE96A48F28880DBE00C1C01D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE96A49728880EB300C1C01D /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		BE96A49928880EE800C1C01D /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		BE96A4A12888107E00C1C01D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		BE96A4A32888108600C1C01D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		EF9577E5E33267417E69417E /* Pods-Todoey-Realm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todoey-Realm.debug.xcconfig"; path = "Target Support Files/Pods-Todoey-Realm/Pods-Todoey-Realm.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE96A49F28880FFB00C1C01D /* RealmSwift in Frameworks */,
+				BE96A49D28880FFB00C1C01D /* Realm in Frameworks */,
+				3984ABB4A537BCE0BBDB0321 /* Pods_Todoey_Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94752DE9066DC5028330445D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF9577E5E33267417E69417E /* Pods-Todoey-Realm.debug.xcconfig */,
+				562D16DEFACA4E5058BCBB2F /* Pods-Todoey-Realm.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BE96A47528880DBC00C1C01D = {
 			isa = PBXGroup;
 			children = (
 				BE96A48028880DBC00C1C01D /* Todoey-Realm */,
 				BE96A47F28880DBC00C1C01D /* Products */,
+				94752DE9066DC5028330445D /* Pods */,
+				BF5371D6C2D74E2B626693D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +88,50 @@
 			children = (
 				BE96A48128880DBC00C1C01D /* AppDelegate.swift */,
 				BE96A48328880DBC00C1C01D /* SceneDelegate.swift */,
-				BE96A48528880DBC00C1C01D /* ViewController.swift */,
-				BE96A48728880DBC00C1C01D /* Main.storyboard */,
+				BE96A49928880EE800C1C01D /* Consts.swift */,
+				BE96A4A02888107000C1C01D /* Model */,
+				BE96A49628880E9400C1C01D /* Controllers */,
+				BE96A49528880DC600C1C01D /* View */,
 				BE96A48A28880DBE00C1C01D /* Assets.xcassets */,
 				BE96A48C28880DBE00C1C01D /* LaunchScreen.storyboard */,
 				BE96A48F28880DBE00C1C01D /* Info.plist */,
 			);
 			path = "Todoey-Realm";
+			sourceTree = "<group>";
+		};
+		BE96A49528880DC600C1C01D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE96A48728880DBC00C1C01D /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE96A49628880E9400C1C01D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE96A48528880DBC00C1C01D /* CategoryTVC.swift */,
+				BE96A49728880EB300C1C01D /* TableView.swift */,
+				BE2DEADF28894C820011B82E /* SwipeTableVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BE96A4A02888107000C1C01D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE96A4A12888107E00C1C01D /* Item.swift */,
+				BE96A4A32888108600C1C01D /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF5371D6C2D74E2B626693D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E4FFA75E98A3D035F71672A /* Pods_Todoey_Realm.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,15 +141,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE96A49228880DBE00C1C01D /* Build configuration list for PBXNativeTarget "Todoey-Realm" */;
 			buildPhases = (
+				97F72F25F69BF53909099722 /* [CP] Check Pods Manifest.lock */,
 				BE96A47A28880DBC00C1C01D /* Sources */,
 				BE96A47B28880DBC00C1C01D /* Frameworks */,
 				BE96A47C28880DBC00C1C01D /* Resources */,
+				34A954486FC69B6C351502B6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Todoey-Realm";
+			packageProductDependencies = (
+				BE96A49C28880FFB00C1C01D /* Realm */,
+				BE96A49E28880FFB00C1C01D /* RealmSwift */,
+			);
 			productName = "Todoey-Realm";
 			productReference = BE96A47E28880DBC00C1C01D /* Todoey-Realm.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +184,9 @@
 				Base,
 			);
 			mainGroup = BE96A47528880DBC00C1C01D;
+			packageReferences = (
+				BE96A49B28880FFB00C1C01D /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = BE96A47F28880DBC00C1C01D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -133,14 +209,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		34A954486FC69B6C351502B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Todoey-Realm/Pods-Todoey-Realm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Todoey-Realm/Pods-Todoey-Realm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Todoey-Realm/Pods-Todoey-Realm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97F72F25F69BF53909099722 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Todoey-Realm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BE96A47A28880DBC00C1C01D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE96A48628880DBC00C1C01D /* ViewController.swift in Sources */,
+				BE96A48628880DBC00C1C01D /* CategoryTVC.swift in Sources */,
+				BE96A49A28880EE800C1C01D /* Consts.swift in Sources */,
+				BE96A49828880EB400C1C01D /* TableView.swift in Sources */,
 				BE96A48228880DBC00C1C01D /* AppDelegate.swift in Sources */,
+				BE96A4A22888107E00C1C01D /* Item.swift in Sources */,
 				BE96A48428880DBC00C1C01D /* SceneDelegate.swift in Sources */,
+				BE2DEAE028894C830011B82E /* SwipeTableVC.swift in Sources */,
+				BE96A4A42888108600C1C01D /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +405,7 @@
 		};
 		BE96A49328880DBE00C1C01D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF9577E5E33267417E69417E /* Pods-Todoey-Realm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -295,6 +419,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,12 +429,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		BE96A49428880DBE00C1C01D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 562D16DEFACA4E5058BCBB2F /* Pods-Todoey-Realm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -323,6 +449,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +459,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +485,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BE96A49B28880FFB00C1C01D /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.28.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BE96A49C28880FFB00C1C01D /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE96A49B28880FFB00C1C01D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		BE96A49E28880FFB00C1C01D /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE96A49B28880FFB00C1C01D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BE96A47628880DBC00C1C01D /* Project object */;
 }

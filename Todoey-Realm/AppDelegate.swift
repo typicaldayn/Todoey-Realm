@@ -4,7 +4,8 @@
 //
 //  Created by Stas Bezhan on 20.07.2022.
 //
-
+import RealmSwift
+import Realm
 import UIKit
 
 @main
@@ -13,7 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        print(Realm.Configuration.defaultConfiguration.fileURL as Any)
+        do {
+            _ = try Realm()
+        } catch {
+            print(error.localizedDescription)
+        }
         return true
     }
 
