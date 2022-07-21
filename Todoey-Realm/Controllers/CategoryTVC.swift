@@ -4,6 +4,7 @@
 //
 //  Created by Stas Bezhan on 20.07.2022.
 //
+import ChameleonFramework
 import SwipeCellKit
 import RealmSwift
 import UIKit
@@ -16,8 +17,18 @@ class CategoryTVC: SwipeTableVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCategories()
-        tableView.rowHeight = 80
         self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let navBar = navigationController?.navigationBar else {fatalError("Navigation controller doesn't exist")}
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor(hexString: "1D9BF6")
+        appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: ContrastColorOf(backgroundColor: appearance.backgroundColor!, returnFlat: true)]
+        navBar.standardAppearance = appearance
+        navBar.scrollEdgeAppearance = navBar.standardAppearance
     }
     
     //refreshing table view
@@ -44,6 +55,7 @@ class CategoryTVC: SwipeTableVC {
         let add = UIAlertAction(title: "Add", style: .default) { [weak self] (action) in
             let newCategory = Category()
             newCategory.name = textField.text!
+            newCategory.hexColor = RandomFlatColor().hexValue()
             self?.save(category: newCategory)
         }
         
@@ -71,8 +83,13 @@ class CategoryTVC: SwipeTableVC {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
        // let cell = tableView.dequeueReusableCell(withIdentifier: K.catCellIf, for: indexPath) //as! //SwipeTableViewCell
         //cell.delegate = self
-        let category = arrayOfCategories?[indexPath.row]
-        cell.textLabel?.text = category?.name
+        if let category = arrayOfCategories?[indexPath.row] {
+            cell.textLabel?.text = category.name
+            cell.backgroundColor = UIColor(hexString: category.hexColor)
+            if let color = cell.backgroundColor {
+                cell.textLabel?.textColor = ContrastColorOf(backgroundColor: color, returnFlat: true)
+            }
+        }
         return cell
     }
     

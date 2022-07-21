@@ -6,6 +6,7 @@
 //
 import RealmSwift
 import UIKit
+import ChameleonFramework
 
 class TableView: SwipeTableVC {
     
@@ -23,6 +24,23 @@ class TableView: SwipeTableVC {
         super.viewDidLoad()
         searchBar.delegate = self
         self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let colorHex = selectedCategory?.hexColor {
+            guard let navBar = navigationController?.navigationBar else {return}
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = UIColor(hexString: colorHex)
+            appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: ContrastColorOf(backgroundColor: appearance.backgroundColor!, returnFlat: true)]
+            navBar.standardAppearance = appearance
+            navBar.scrollEdgeAppearance = navBar.standardAppearance
+            
+            searchBar.barTintColor = UIColor(hexString: colorHex)
+            navBar.tintColor = ContrastColorOf(backgroundColor: UIColor(hexString: colorHex)!, returnFlat: true)
+            searchBar.searchTextField.backgroundColor = FlatWhite()
+        }
     }
     
     //refreshing table view
@@ -102,6 +120,12 @@ class TableView: SwipeTableVC {
         if let item = todoItems?[indexPath.row] {
             cell.textLabel?.text = item.title
             cell.accessoryType = item.done ? .checkmark : .none
+            if let categoryColour = UIColor(hexString: selectedCategory?.hexColor) {
+                if let colour = categoryColour.darken(byPercentage: CGFloat(indexPath.row) / CGFloat((todoItems!.count * 5))) {
+                    cell.textLabel?.textColor = (ContrastColorOf(backgroundColor: colour, returnFlat: true))
+                    cell.backgroundColor = colour
+                }
+            }
         }else{
             cell.textLabel?.text = "No items added"
         }
@@ -124,20 +148,20 @@ class TableView: SwipeTableVC {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        if let item = todoItems?[indexPath.row] {
-//            if editingStyle == .delete {
-//                do {
-//                    try realm.write{
-//                        realm.delete(item)
-//                        tableView.reloadData()
-//                    }
-//                }catch{
-//                    print(error.localizedDescription)
-//                }
-//            }
-//        }
-//    }
+    //    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    //        if let item = todoItems?[indexPath.row] {
+    //            if editingStyle == .delete {
+    //                do {
+    //                    try realm.write{
+    //                        realm.delete(item)
+    //                        tableView.reloadData()
+    //                    }
+    //                }catch{
+    //                    print(error.localizedDescription)
+    //                }
+    //            }
+    //        }
+    //    }
     override func updateModel(at indexPath: IndexPath) {
         if let item = todoItems?[indexPath.row] {
             do {
@@ -153,7 +177,7 @@ class TableView: SwipeTableVC {
 
 //MARK: - SearchBarDelegate:
 extension TableView: UISearchBarDelegate {
-//sorting by date
+    //sorting by date
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         todoItems = todoItems?.filter("title CONTAINS[cd] %@", searchBar.text!).sorted(byKeyPath: "dateCreated", ascending: true)
         tableView.reloadData()
